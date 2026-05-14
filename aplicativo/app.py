@@ -179,19 +179,20 @@ except FileNotFoundError as e:
 
 # ── Sidebar ────────────────────────────────────────────────
 with st.sidebar:
-    if os.path.exists("logo.png"):
-        st.image("logo.png", use_container_width=True)
+    logo_path = os.path.join(BASE_DIR, "logo.png")
+    if os.path.exists(logo_path):
+        st.image(logo_path, use_container_width=True)
     st.markdown(
         f"<hr style='border-color: rgba(255,255,255,0.25); margin: 14px 0'>",
         unsafe_allow_html=True
     )
     st.markdown(
-        f"<p style='color:{cinza_texto}; font-size:15px; font-weight:700; margin:0 0 16px 0'>Predição de Risco de Defasagem</p>",
+        f"<p style='color:{branco}; font-size:15px; font-weight:700; margin:0 0 16px 0'>Predicao de Risco de Defasagem</p>",
         unsafe_allow_html=True
     )
     pagina = st.radio(
-        "Navegação",
-        ["📊  Dashboard", "🔍  Análise Individual", "📁  Análise em Lote"],
+        "Navegacao",
+        ["📊  Dashboard", "🔍  Analise Individual", "📁  Analise em Lote"],
         label_visibility="collapsed",
     )
 
