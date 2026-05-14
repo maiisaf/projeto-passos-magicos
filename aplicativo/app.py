@@ -159,11 +159,11 @@ st.markdown(f"""
 # ── Carregamento ───────────────────────────────────────────
 @st.cache_resource
 def carregar_pipeline():
-    return joblib.load("/Users/maisafernandes/Documents/Projetos Git/Projeto Passos Mágicos/dados_notebooks/modelo/pipeline_risco_1.joblib")
+    return joblib.load("../dados_notebooks/modelo/pipeline_risco_1.joblib")
 
 @st.cache_data
 def carregar_artefatos():
-    with open("/Users/maisafernandes/Documents/Projetos Git/Projeto Passos Mágicos/dados_notebooks/modelo/artefatos_modelo_1.json", "r", encoding="utf-8") as f:
+    with open("../dados_notebooks/modelo/artefatos_modelo_1.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 try:
