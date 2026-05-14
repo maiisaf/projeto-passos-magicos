@@ -1,0 +1,56 @@
+{
+  "modelo": "XGBoost",
+  "versao": "1.0",
+  "data_treino": "2022-2023",
+  "data_teste": "2024",
+  "features": [
+    "IDA",
+    "IEG",
+    "IAA",
+    "IPS",
+    "IPV",
+    "IPP",
+    "Nota_mat",
+    "Nota_port",
+    "Idade",
+    "Fase_num",
+    "Pedra_enc",
+    "ipp_disponivel",
+    "Delta_IDA",
+    "Delta_IEG",
+    "Delta_IPS",
+    "Delta_IAA",
+    "Delta_IPV",
+    "tem_historico_IDA",
+    "gap_percepcao_realidade",
+    "indice_bem_estar",
+    "pressao_psicossocial",
+    "Persona_enc"
+  ],
+  "n_features": 22,
+  "metricas_treino": {
+    "acuracia": 0.9931,
+    "recall": 0.9911,
+    "f1": 0.9947
+  },
+  "metricas_teste": {
+    "acuracia": 0.91,
+    "recall": 0.9437,
+    "precision": 0.9025,
+    "f1": 0.9226,
+    "roc_auc": 0.9439
+  },
+  "threshold": 0.5,
+  "target": "em_risco (IAN <= 5)",
+  "balanceamento": {
+    "treino_risco_pct": 0.6596,
+    "teste_risco_pct": 0.5683
+  },
+  "top5_features_shap": [
+    "Fase_num",
+    "Idade",
+    "IDA",
+    "Pedra_enc",
+    "IPP"
+  ]
+}
