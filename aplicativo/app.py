@@ -157,15 +157,18 @@ st.markdown(f"""
 
 
 # ── Carregamento ───────────────────────────────────────────
+BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
+MODELO_DIR = os.path.join(BASE_DIR, "..", "dados_notebooks", "modelo")
+ 
 @st.cache_resource
 def carregar_pipeline():
-    return joblib.load("../dados_notebooks/modelo/pipeline_risco_1.joblib")
-
+    return joblib.load(os.path.join(MODELO_DIR, "pipeline_risco_1.joblib"))
+ 
 @st.cache_data
 def carregar_artefatos():
-    with open("../dados_notebooks/modelo/artefatos_modelo_1.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(MODELO_DIR, "artefatos_modelo_1.json"), "r", encoding="utf-8") as f:
         return json.load(f)
-
+ 
 try:
     pipeline  = carregar_pipeline()
     artefatos = carregar_artefatos()
