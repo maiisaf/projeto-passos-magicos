@@ -192,7 +192,7 @@ with st.sidebar:
     )
     pagina = st.radio(
         "Navegacao",
-        ["📊  Dashboard", "🔍  Analise Individual", "📁  Analise em Lote"],
+        ["📊  Dashboard", "🔍  Análise Individual", "📁  Análise em Lote"],
         label_visibility="collapsed",
     )
 
