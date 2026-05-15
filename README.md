@@ -34,5 +34,6 @@ O app permite:
 
 **Raiz:**
 - `Documentacao_Tecnica.pdf` — documentação técnica completa do projeto
+- `Apresentacao.pptx` — apresentação com os principais insights
 - `.gitignore` — arquivos ignorados pelo git
 - `README.md` — este arquivo
