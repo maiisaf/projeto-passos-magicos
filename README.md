@@ -1,36 +1,38 @@
-Datathon Passos Mágicos — POSTECH
-Projeto de analytics educacional desenvolvido para o Datathon da Associação Passos Mágicos, com o objetivo de identificar alunos em risco de defasagem escolar e apoiar a tomada de decisão da equipe pedagógica.
+# Datathon Passos Mágicos — POSTECH
 
-Aplicativo em produção:
-🔗 projeto-p-magicos-iagnvpwys3az9mwxsdsn2k.streamlit.app
+Projeto de analytics educacional para identificar alunos em risco de defasagem escolar e apoiar a equipe pedagógica da Associação Passos Mágicos.
+
+---
+
+## Aplicativo em produção
+
+🔗 **[Acessar o app](https://projeto-p-magicos-iagnvpwys3az9mwxsdsn2k.streamlit.app/)**
 
 O app permite:
-Visualizar o dashboard analítico do programa (Tableau Public)
-Calcular a probabilidade de risco de defasagem de um aluno individualmente
-Analisar múltiplos alunos em lote via upload de CSV
+- Visualizar o dashboard analítico do programa (Tableau Public)
+- Calcular a probabilidade de risco de defasagem individualmente
+- Analisar múltiplos alunos em lote via upload de CSV
 
-📁 Estrutura do repositório:
+---
 
-projeto-passos-magicos/
-│
-├── aplicativo/                        # App Streamlit
-│   ├── app.py                         # Aplicativo principal
-│   ├── transformers.py                # Classes do pipeline de ML
-│   ├── requirements.txt               # Dependências do projeto
-│   ├── logo.png                       # Logo da Associação Passos Mágicos
-│   └── .streamlit/
-│       └── config.toml                # Tema e configurações visuais
-│
-├── dados_notebooks/                   # Análises e modelagem
-│   ├── exploracao_dados.ipynb         # Análise exploratória dos dados
-│   ├── modelo_ml.ipynb                # Notebook de modelagem preditiva
-│   ├── base_dados_passos_magicos.csv  # Base de dados PEDE 2022–2024
-│   ├── graficos/                      # Gráficos gerados pelo modelo
-│   └── modelo/
-│       ├── pipeline_risco.joblib      # Pipeline treinado (transformers + modelo)
-│       └── artefatos_modelo.json      # Métricas, features e metadados do modelo
-│
-├── Documentacao_Tecnica.pdf           # Documentação técnica completa do projeto
-├── Apresentacao.pdf                   # Apresentação em PowerPoint dos principais insights
-├── .gitignore
-└── README.md
+## 📁 Estrutura do repositório
+
+**aplicativo/:**
+- `app.py` — aplicativo principal Streamlit
+- `transformers.py` — classes do pipeline de ML
+- `requirements.txt` — dependências do projeto
+- `logo.png` — logo da Associação Passos Mágicos
+- `.streamlit/config.toml` — tema e configurações visuais
+
+**dados_notebooks/:**
+- `exploracao_dados.ipynb` — análise exploratória dos dados
+- `modelo_ml.ipynb` — notebook de modelagem preditiva
+- `base_dados_passos_magicos.csv` — base de dados PEDE 2022–2024
+- `graficos/` — gráficos gerados pelo modelo
+- `modelo/pipeline_risco.joblib` — pipeline treinado (transformers + modelo)
+- `modelo/artefatos_modelo.json` — métricas, features e metadados do modelo
+
+**Raiz:**
+- `Documentacao_Tecnica.pdf` — documentação técnica completa do projeto
+- `.gitignore` — arquivos ignorados pelo git
+- `README.md` — este arquivo
